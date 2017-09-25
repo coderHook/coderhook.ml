@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on coderHook</title>
+    <link>https://coderhook-ml.firebaseapp.com/tags/</link>
+    <description>Recent content in Tags on coderHook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 coderHook</copyright>
+    <lastBuildDate>Sun, 01 Jan 2017 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Content tagged as &#39;Academic&#39;</title>
+      <link>https://coderhook-ml.firebaseapp.com/tags/academic/</link>
+      <pubDate>Sun, 01 Jan 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/tags/academic/</guid>
+      <description>&lt;p&gt;Here is a list of all the content that has been tagged as &lt;em&gt;academic&lt;/em&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+    <item>
+      <title>Algo</title>
+      <link>https://coderhook-ml.firebaseapp.com/tags/algo/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/tags/algo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>D3js</title>
+      <link>https://coderhook-ml.firebaseapp.com/tags/d3js/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/tags/d3js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Datascience</title>
+      <link>https://coderhook-ml.firebaseapp.com/tags/datascience/</link>
+      <pubDate>Thu, 27 Jul 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/tags/datascience/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nodejs</title>
+      <link>https://coderhook-ml.firebaseapp.com/tags/nodejs/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/tags/nodejs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Others</title>
+      <link>https://coderhook-ml.firebaseapp.com/tags/others/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/tags/others/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reactjs</title>
+      <link>https://coderhook-ml.firebaseapp.com/tags/reactjs/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/tags/reactjs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vuejs</title>
+      <link>https://coderhook-ml.firebaseapp.com/tags/vuejs/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/tags/vuejs/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

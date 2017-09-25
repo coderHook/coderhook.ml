@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.26" />
+  <meta name="author" content="Pedro Abel Diaz">
+  <meta name="description" content="Self-taugh Full Stack Web Developer &amp; Data Scientist">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  
+
+  <link rel="alternate" href="https://coderhook-ml.firebaseapp.com/index.xml" type="application/rss+xml" title="coderHook">
+  <link rel="feed" href="https://coderhook-ml.firebaseapp.com/index.xml" type="application/rss+xml" title="coderHook">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://coderhook-ml.firebaseapp.com/project/first-time-with-matplotlib/">
+
+  
+
+  <title> Using Matplotlib, first steps.  | coderHook</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">coderHook</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article article-project" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  <img src="/img/matplotlib.png" class="article-banner" itemprop="image">
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="pub-title">
+      <h1 itemprop="name"> Using Matplotlib, first steps. </h1>
+      <span class="pub-authors" itemprop="author">&nbsp;</span>
+      <span class="pull-right">
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2ffirst-time-with-matplotlib%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=%20Using%20Matplotlib%2c%20first%20steps.%20&amp;url=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2ffirst-time-with-matplotlib%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2ffirst-time-with-matplotlib%2f&amp;title=%20Using%20Matplotlib%2c%20first%20steps.%20"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2ffirst-time-with-matplotlib%2f&amp;title=%20Using%20Matplotlib%2c%20first%20steps.%20"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=%20Using%20Matplotlib%2c%20first%20steps.%20&amp;body=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2ffirst-time-with-matplotlib%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </span>
+    </div>
+
+    
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="first-time-with-matplotlib">First Time with Matplotlib.</h1>
+
+<h3 id="an-easy-way-to-visualize-data-using-the-main-tools-availables">An easy way to visualize data using the main tools availables.</h3>
+
+<p>In this notebook we are going to show 3 kind of plots:
+    - Linear Plots: Gave a good sense on the tendency of the data.
+    - Scatter Plot: Great to see if the data follow a tendency or if it is too &ldquo;scatter&rdquo;.
+    - Bar Plots: Easy to compare data an see which of the variables appears more frequently or even the distribution of it.</p>
+
+<h5 id="after-it-we-will-extract-some-insight-that-will-help-us-for-following-researchs">After it, we will extract some insight that will help us for following researchs.</h5>
+
+<pre><code class="language-python">%matplotlib inline
+
+import matplotlib.pyplot as plt
+import pandas as pd
+
+unrate = pd.read_csv(&quot;unrate.csv&quot;)
+unrate['DATE'] = pd.to_datetime(unrate['DATE']) #pd.to_datetime() transforms date string into a date format.
+
+plt.plot(unrate['DATE'][0:12], unrate['VALUE'][:12])
+plt.xticks(rotation = 90)
+plt.xlabel(&quot;Month&quot;)
+plt.ylabel(&quot;Unemployment Rate&quot;)
+plt.title(&quot;Monthly Unemployment Trends, 1948&quot;)
+plt.show()
+</code></pre>
+
+<p><img src="/img/ds/matplotlib/output_1_0.png" alt="png" /></p>
+
+<pre><code class="language-python">fig = plt.figure(figsize=(10,6))
+colors = ['red', 'blue', 'green', 'orange', 'black']
+labels = ['1948', '1949', '1950', '1951', '1952']
+unrate['MONTH'] = unrate['DATE'].dt.month
+
+for i in range(5):
+    start_index = i*12
+    end_index = (i+1)*12
+    subset = unrate[start_index:end_index]
+    label = str(1948 + i)
+    plt.plot(subset['MONTH'], subset['VALUE'], c=colors[i], label=labels[i])
+plt.title(&quot;Monthly Unemployment Trends, 1948-1952&quot;)
+plt.xlabel(&quot;Month, Integer&quot;)
+plt.ylabel(&quot;Unemployment Rate, Percent&quot;)
+plt.legend(loc='upper left')
+
+plt.show()
+</code></pre>
+
+<p><img src="/img/ds/matplotlib/output_2_0.png" alt="png" /></p>
+
+<h1 id="scatter-plot-bar-plot">Scatter Plot &amp; Bar Plot</h1>
+
+<pre><code class="language-python">import seaborn as sns
+
+df = pd.read_csv(&quot;fandango_score_comparison.csv&quot;)
+
+columns = ['FILM', 'RT_user_norm', 'Metacritic_user_nom', 'IMDB_norm', 'Fandango_Ratingvalue', 'Fandango_Stars', 'Metacritic_norm_round']
+
+df = review[columns]
+
+df.head()
+</code></pre>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>FILM</th>
+      <th>RT_user_norm</th>
+      <th>Metacritic_user_nom</th>
+      <th>IMDB_norm</th>
+      <th>Fandango_Ratingvalue</th>
+      <th>Fandango_Stars</th>
+      <th>Metacritic_norm_round</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Avengers: Age of Ultron (2015)</td>
+      <td>4.3</td>
+      <td>3.55</td>
+      <td>3.90</td>
+      <td>4.5</td>
+      <td>5.0</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>Cinderella (2015)</td>
+      <td>4.0</td>
+      <td>3.75</td>
+      <td>3.55</td>
+      <td>4.5</td>
+      <td>5.0</td>
+      <td>3.5</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Ant-Man (2015)</td>
+      <td>4.5</td>
+      <td>4.05</td>
+      <td>3.90</td>
+      <td>4.5</td>
+      <td>5.0</td>
+      <td>3.0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Do You Believe? (2015)</td>
+      <td>4.2</td>
+      <td>2.35</td>
+      <td>2.70</td>
+      <td>4.5</td>
+      <td>5.0</td>
+      <td>1.0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Hot Tub Time Machine 2 (2015)</td>
+      <td>1.4</td>
+      <td>1.70</td>
+      <td>2.55</td>
+      <td>3.0</td>
+      <td>3.5</td>
+      <td>1.5</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="language-python">plt.scatter(df['Metacritic_norm_round'], df['Fandango_Stars'])
+sns.plt.show()
+</code></pre>
+
+<p><img src="/img/ds/matplotlib/output_5_0.png" alt="png" /></p>
+
+<h3 id="bar-plot">Bar Plot</h3>
+
+<ul>
+<li>Bar plot are really useful to compare data between some variables, in this case we can compare easily for instance, each of the columns with the frecuency.</li>
+</ul>
+
+<pre><code class="language-python">df['Metacritic_norm_round'].plot(kind=&quot;hist&quot;)
+df['Fandango_Stars'].plot(kind=&quot;hist&quot;)
+plt.legend()
+sns.plt.show()
+</code></pre>
+
+<p><img src="/img/ds/matplotlib/output_7_0.png" alt="png" /></p>
+
+<ul>
+<li>In this case we can see somethign really interesting, Fandango_Stars doesnt have valuation less than 3 which is suspicious, and should result in more things to look for on the data to see what is happening there.</li>
+</ul>
+
+<h1 id="conclusion">Conclusion</h1>
+
+<p>Is it super easy to compare data using matplotlib, we also learnt that seaborn can gave us other sense on the visualization and make this more understandable and finally, we practice the 3 kind of plots, inear plots, Scatter plot and Bar plot.</p>
+
+<pre><code class="language-python">
+</code></pre>
+
+    </div>
+
+  </div>
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://coderhook-ml.firebaseapp.com/project/bike-rentals-prediction/"><span
+      aria-hidden="true">&larr;</span> Bike Rentals Prediction</a></li>
+    
+
+    
+    <li class="next"><a href="https://coderhook-ml.firebaseapp.com/project/learning-data-visualization-with-seaborn/">Learning Data Visualization with Seaborn and Python.  <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 coderHook &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

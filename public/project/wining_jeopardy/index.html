@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.26" />
+  <meta name="author" content="Pedro Abel Diaz">
+  <meta name="description" content="Self-taugh Full Stack Web Developer &amp; Data Scientist">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  
+
+  <link rel="alternate" href="https://coderhook-ml.firebaseapp.com/index.xml" type="application/rss+xml" title="coderHook">
+  <link rel="feed" href="https://coderhook-ml.firebaseapp.com/index.xml" type="application/rss+xml" title="coderHook">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://coderhook-ml.firebaseapp.com/project/wining_jeopardy/">
+
+  
+
+  <title>Winning at Jeopardy Game (part 1/2)  | coderHook</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">coderHook</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article article-project" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  <img src="/img/headers/jeopardy.jpg" class="article-banner" itemprop="image">
+  
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="pub-title">
+      <h1 itemprop="name">Winning at Jeopardy Game (part 1/2) </h1>
+      <span class="pub-authors" itemprop="author">&nbsp;</span>
+      <span class="pull-right">
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fwining_jeopardy%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Winning%20at%20Jeopardy%20Game%20%28part%201%2f2%29%20&amp;url=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fwining_jeopardy%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fwining_jeopardy%2f&amp;title=Winning%20at%20Jeopardy%20Game%20%28part%201%2f2%29%20"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fwining_jeopardy%2f&amp;title=Winning%20at%20Jeopardy%20Game%20%28part%201%2f2%29%20"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Winning%20at%20Jeopardy%20Game%20%28part%201%2f2%29%20&amp;body=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fwining_jeopardy%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </span>
+    </div>
+
+    
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="winning-at-jeopardy-game-part-1-2">Winning at Jeopardy Game (part <sup>1</sup>&frasl;<sub>2</sub>)</h1>
+
+<h4 id="jeopardy-es-un-concurso-de-televisión-estadounidense-creado-por-merv-griffin-es-un-concurso-de-conocimientos-con-preguntas-sobre-numerosos-temas-como-historia-idiomas-literatura-cultura-popular-bellas-artes-ciencia-geografía-y-deportes-consiste-en-que-uno-de-los-tres-concursantes-elige-uno-de-los-paneles-del-tablero-de-juego-el-cual-al-ser-descubierto-revela-una-pista-en-forma-de-respuesta-los-concursantes-entonces-tienen-que-dar-sus-respuestas-en-forma-de-una-pregunta">Jeopardy! es un concurso de televisión estadounidense creado por Merv Griffin. Es un concurso de conocimientos con preguntas sobre numerosos temas como historia, idiomas, literatura, cultura popular, bellas artes, ciencia, geografía, y deportes. Consiste en que uno de los tres concursantes elige uno de los paneles del tablero de juego, el cual, al ser descubierto, revela una pista en forma de respuesta; los concursantes entonces tienen que dar sus respuestas en forma de una pregunta.</h4>
+
+<ul>
+<li>In this project we are going to first:
+
+<ul>
+<li>Normalize the text.</li>
+<li>Look for the answers in questions.</li>
+<li>Look for question that are repeated from time to time. (Trying to win easy :)</li>
+<li>Low Value &amp; high Value Question. How to get more points.</li>
+<li>Applying the Chi-Squared Test.</li>
+</ul></li>
+</ul>
+
+<pre><code class="language-python">import pandas as pd
+import csv
+
+jeopardy = pd.read_csv(&quot;jeopardy.csv&quot;)
+
+print(jeopardy.head())
+</code></pre>
+
+<pre><code>   Show Number    Air Date      Round                         Category  Value  \
+0         4680  2004-12-31  Jeopardy!                          HISTORY   $200   
+1         4680  2004-12-31  Jeopardy!  ESPN's TOP 10 ALL-TIME ATHLETES   $200   
+2         4680  2004-12-31  Jeopardy!      EVERYBODY TALKS ABOUT IT...   $200   
+3         4680  2004-12-31  Jeopardy!                 THE COMPANY LINE   $200   
+4         4680  2004-12-31  Jeopardy!              EPITAPHS &amp; TRIBUTES   $200   
+
+                                            Question      Answer  
+0  For the last 8 years of his life, Galileo was ...  Copernicus  
+1  No. 2: 1912 Olympian; football star at Carlisl...  Jim Thorpe  
+2  The city of Yuma in this state has a record av...     Arizona  
+3  In 1963, live on &quot;The Art Linkletter Show&quot;, th...  McDonald's  
+4  Signer of the Dec. of Indep., framer of the Co...  John Adams  
+</code></pre>
+
+<pre><code class="language-python">jeopardy.head()
+</code></pre>
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Show Number</th>
+      <th>Air Date</th>
+      <th>Round</th>
+      <th>Category</th>
+      <th>Value</th>
+      <th>Question</th>
+      <th>Answer</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4680</td>
+      <td>2004-12-31</td>
+      <td>Jeopardy!</td>
+      <td>HISTORY</td>
+      <td>$200</td>
+      <td>For the last 8 years of his life, Galileo was ...</td>
+      <td>Copernicus</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4680</td>
+      <td>2004-12-31</td>
+      <td>Jeopardy!</td>
+      <td>ESPN's TOP 10 ALL-TIME ATHLETES</td>
+      <td>$200</td>
+      <td>No. 2: 1912 Olympian; football star at Carlisl...</td>
+      <td>Jim Thorpe</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4680</td>
+      <td>2004-12-31</td>
+      <td>Jeopardy!</td>
+      <td>EVERYBODY TALKS ABOUT IT...</td>
+      <td>$200</td>
+      <td>The city of Yuma in this state has a record av...</td>
+      <td>Arizona</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4680</td>
+      <td>2004-12-31</td>
+      <td>Jeopardy!</td>
+      <td>THE COMPANY LINE</td>
+      <td>$200</td>
+      <td>In 1963, live on "The Art Linkletter Show", th...</td>
+      <td>McDonald's</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4680</td>
+      <td>2004-12-31</td>
+      <td>Jeopardy!</td>
+      <td>EPITAPHS &amp; TRIBUTES</td>
+      <td>$200</td>
+      <td>Signer of the Dec. of Indep., framer of the Co...</td>
+      <td>John Adams</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="language-python">jeopardy.columns
+</code></pre>
+
+<pre><code>Index(['Show Number', ' Air Date', ' Round', ' Category', ' Value',
+       ' Question', ' Answer'],
+      dtype='object')
+</code></pre>
+
+<pre><code class="language-python">jeopardy.columns = ['Show Number', 'Air Date', 'Round', 'Category', 'Value', 'Question', 'Answer']
+jeopardy.columns
+</code></pre>
+
+<pre><code>Index(['Show Number', 'Air Date', 'Round', 'Category', 'Value', 'Question',
+       'Answer'],
+      dtype='object')
+</code></pre>
+
+<h1 id="normalizing-text">Normalizing Text</h1>
+
+<pre><code class="language-python">import re
+
+def normalize_text(text):
+    text = text.lower()
+    text = re.sub(&quot;[^A-Za-z0-9\s]&quot;, &quot;&quot;, text)
+    return text
+
+def normalize_values(text):
+    text = re.sub(&quot;[^A-Za-z0-9\s]&quot;, &quot;&quot;, text)
+
+    try:
+        text = int(text)
+    except Exception:
+        text = 0
+    return text
+
+</code></pre>
+
+<pre><code class="language-python">jeopardy[&quot;clean_question&quot;] = jeopardy[&quot;Question&quot;].apply(normalize_text)
+jeopardy[&quot;clean_answer&quot;] = jeopardy[&quot;Answer&quot;].apply(normalize_text)
+jeopardy[&quot;clean_value&quot;] = jeopardy[&quot;Value&quot;].apply(normalize_values)
+</code></pre>
+
+<pre><code class="language-python">jeopardy.head()
+</code></pre>
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Show Number</th>
+      <th>Air Date</th>
+      <th>Round</th>
+      <th>Category</th>
+      <th>Value</th>
+      <th>Question</th>
+      <th>Answer</th>
+      <th>clean_question</th>
+      <th>clean_answer</th>
+      <th>clean_value</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>4680</td>
+      <td>2004-12-31</td>
+      <td>Jeopardy!</td>
+      <td>HISTORY</td>
+      <td>$200</td>
+      <td>For the last 8 years of his life, Galileo was ...</td>
+      <td>Copernicus</td>
+      <td>for the last 8 years of his life galileo was u...</td>
+      <td>copernicus</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>4680</td>
+      <td>2004-12-31</td>
+      <td>Jeopardy!</td>
+      <td>ESPN's TOP 10 ALL-TIME ATHLETES</td>
+      <td>$200</td>
+      <td>No. 2: 1912 Olympian; football star at Carlisl...</td>
+      <td>Jim Thorpe</td>
+      <td>no 2 1912 olympian football star at carlisle i...</td>
+      <td>jim thorpe</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>4680</td>
+      <td>2004-12-31</td>
+      <td>Jeopardy!</td>
+      <td>EVERYBODY TALKS ABOUT IT...</td>
+      <td>$200</td>
+      <td>The city of Yuma in this state has a record av...</td>
+      <td>Arizona</td>
+      <td>the city of yuma in this state has a record av...</td>
+      <td>arizona</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4680</td>
+      <td>2004-12-31</td>
+      <td>Jeopardy!</td>
+      <td>THE COMPANY LINE</td>
+      <td>$200</td>
+      <td>In 1963, live on "The Art Linkletter Show", th...</td>
+      <td>McDonald's</td>
+      <td>in 1963 live on the art linkletter show this c...</td>
+      <td>mcdonalds</td>
+      <td>200</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>4680</td>
+      <td>2004-12-31</td>
+      <td>Jeopardy!</td>
+      <td>EPITAPHS &amp; TRIBUTES</td>
+      <td>$200</td>
+      <td>Signer of the Dec. of Indep., framer of the Co...</td>
+      <td>John Adams</td>
+      <td>signer of the dec of indep framer of the const...</td>
+      <td>john adams</td>
+      <td>200</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<pre><code class="language-python">jeopardy[&quot;Air Date&quot;] = pd.to_datetime(jeopardy[&quot;Air Date&quot;])
+</code></pre>
+
+<pre><code class="language-python">jeopardy.dtypes
+</code></pre>
+
+<pre><code>Show Number                int64
+Air Date          datetime64[ns]
+Round                     object
+Category                  object
+Value                     object
+Question                  object
+Answer                    object
+clean_question            object
+clean_answer              object
+clean_value                int64
+dtype: object
+</code></pre>
+
+<h1 id="looking-for-answers-in-questions">Looking for Answers in Questions</h1>
+
+<pre><code class="language-python">def answ_in_quest(row):
+    split_answer = row[&quot;clean_answer&quot;].split(&quot; &quot;)
+    split_question = row[&quot;clean_question&quot;].split(&quot; &quot;)
+
+    match_count = 0
+
+    if &quot;the&quot; in split_answer:
+        split_answer.remove('the')
+    if len(split_answer) == 0:
+        return 0
+
+    for item in split_answer:
+        if item in split_question:
+            match_count += 1
+
+    return match_count / len(split_answer)
+
+jeopardy['answer_in_question'] = jeopardy.apply(answ_in_quest, axis=1)
+
+</code></pre>
+
+<pre><code class="language-python">jeopardy[&quot;answer_in_question&quot;].mean()
+</code></pre>
+
+<pre><code>0.060493257069335872
+</code></pre>
+
+<h3 id="the-percentage-of-finding-the-answer-in-the-question-is-around-6-as-it-is-a-small-quantity-in-order-to-win-at-this-game-we-cannot-expect-to-get-a-los-of-answers-just-looking-at-the-question">The percentage of finding the answer in the question is around 6%, as it is a small quantity in order to win at this game we cannot expect to get a los of answers just looking at the question.</h3>
+
+<h1 id="looking-for-questions-that-are-repeated-from-time-to-time">Looking for Questions that are repeated from time to time</h1>
+
+<pre><code class="language-python">question_overlap = []
+terms_used = set()
+
+for i, row in jeopardy.iterrows():
+    split_question = row[&quot;clean_question&quot;].split(&quot; &quot;)
+
+    split_question = [q for q in split_question if len(q) &gt; 5]
+    match_count = 0
+
+    for word in split_question:
+        if word in terms_used:
+            match_count += 1
+        terms_used.add(word)
+
+    if len(split_question) &gt; 0:
+        match_count = match_count/len(split_question)
+
+    question_overlap.append(match_count)
+
+jeopardy[&quot;question_overlap&quot;] = question_overlap
+
+jeopardy[&quot;question_overlap&quot;].mean()
+</code></pre>
+
+<pre><code>0.69259600573386471
+</code></pre>
+
+<h4 id="here-we-have-a-mean-of-70-which-means-that-it-can-be-relevant-to-look-at-past-question-because-is-probably-that-it-would-be-repeated-in-other-games-but-here-we-hav-to-be-careful-because-we-look-at-it-by-word-per-word-which-cna-be-tricky-but-definetly-the-70-is-significant-and-we-should-keep-working-in-this-part-of-the-game">Here we have a mean of 70% which means that it can be relevant to look at past question because is probably that it would be repeated in other games, but here we hav to be careful because we look at it by word per word which cna be tricky, but definetly, the 70% is significant and we should keep working in this part of the game.</h4>
+
+<h1 id="low-value-vs-high-value-questions">Low Value Vs High Value Questions</h1>
+
+<pre><code class="language-python">def assign_values(row):
+    if row['clean_value'] &gt; 800:
+        value = 1
+    else:
+        value = 0
+    return value
+jeopardy['high_value'] = jeopardy.apply(assign_values, axis = 1)
+</code></pre>
+
+<pre><code class="language-python">def takes_a_word(word):
+    low_count = 0
+    high_count = 0
+
+    for i, row in jeopardy.iterrows():
+        split_question = row[&quot;clean_question&quot;].split(&quot; &quot;)
+
+        if word in split_question:
+            if row['high_value'] == 1:
+                high_count += 1
+            else:
+                low_count += 1
+    return high_count, low_count
+
+</code></pre>
+
+<pre><code class="language-python">observed_expected = []
+
+comparison_terms = list(terms_used)[:5]
+</code></pre>
+
+<pre><code class="language-python">print(comparison_terms)
+</code></pre>
+
+<pre><code>['glamourous', 'handsomest', 'sutherland', 'laptopa', 'absorbed']
+</code></pre>
+
+<pre><code class="language-python">for term in comparison_terms:
+    observed_expected.append(takes_a_word(term))
+</code></pre>
+
+<pre><code class="language-python">observed_expected
+</code></pre>
+
+<pre><code>[(1, 0), (1, 1), (0, 1), (0, 1), (2, 0)]
+</code></pre>
+
+<h1 id="applying-the-chi-squared-test">Applying The Chi-Squared Test</h1>
+
+<pre><code class="language-python">high_value_count = jeopardy[jeopardy[&quot;high_value&quot;] == 1].shape[0]
+print(high_value_count)
+</code></pre>
+
+<pre><code>5734
+</code></pre>
+
+<pre><code class="language-python">low_value_count = jeopardy[jeopardy[&quot;high_value&quot;] == 0].shape[0]
+</code></pre>
+
+<pre><code class="language-python">chi_squared = []
+
+from scipy.stats import chisquare
+import numpy as np
+</code></pre>
+
+<pre><code class="language-python">for obs in observed_expected:
+    total = sum(obs)
+    total_prop = total / len(jeopardy)
+    exp_high_value = total_prop * high_value_count
+    exp_low_value = total_prop * low_value_count
+
+    chi_squared.append(chisquare(np.array([obs[0], obs[1]]), np.array([exp_high_value, exp_low_value])))
+</code></pre>
+
+<pre><code class="language-python">chi_squared
+</code></pre>
+
+<pre><code>[Power_divergenceResult(statistic=2.4877921171956752, pvalue=0.11473257634454047),
+ Power_divergenceResult(statistic=0.44487748166127949, pvalue=0.50477764875459963),
+ Power_divergenceResult(statistic=0.40196284612688399, pvalue=0.52607729857054686),
+ Power_divergenceResult(statistic=0.40196284612688399, pvalue=0.52607729857054686),
+ Power_divergenceResult(statistic=4.9755842343913503, pvalue=0.025707519787911092),
+ Power_divergenceResult(statistic=2.4877921171956752, pvalue=0.11473257634454047),
+ Power_divergenceResult(statistic=0.44487748166127949, pvalue=0.50477764875459963),
+ Power_divergenceResult(statistic=0.40196284612688399, pvalue=0.52607729857054686),
+ Power_divergenceResult(statistic=0.40196284612688399, pvalue=0.52607729857054686),
+ Power_divergenceResult(statistic=4.9755842343913503, pvalue=0.025707519787911092)]
+</code></pre>
+
+<h4 id="we-will-continue-in-part-2-trying-different-model-to-get-some-more-insights-and-se-if-they-can-work-better-than-chi-squared">We will continue in part 2 trying different model to get some more insights and se if they can work better than chi-Squared.</h4>
+
+<pre><code class="language-python">
+</code></pre>
+
+    </div>
+
+  </div>
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://coderhook-ml.firebaseapp.com/project/camperleaderboard/"><span
+      aria-hidden="true">&larr;</span> Camper LeaderBoard</a></li>
+    
+
+    
+    <li class="next"><a href="https://coderhook-ml.firebaseapp.com/project/gendergap/">Visualizing the gender gap in Major College Degrees <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 coderHook &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>D3js on coderHook</title>
+    <link>https://coderhook-ml.firebaseapp.com/tags/d3js/</link>
+    <description>Recent content in D3js on coderHook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 coderHook</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/d3js/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Global Map Meteorite Data (d3.js)</title>
+      <link>https://coderhook-ml.firebaseapp.com/project/global-map-d3.js/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/project/global-map-d3.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Show National Contiguity with a Force Directed Graph (d3.js)</title>
+      <link>https://coderhook-ml.firebaseapp.com/project/relationalmapsd3.js/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/project/relationalmapsd3.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualize Data with a Bar Chart</title>
+      <link>https://coderhook-ml.firebaseapp.com/project/bar-chart-d3.js/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/project/bar-chart-d3.js/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Visualize Data with a Scatterplot Graph</title>
+      <link>https://coderhook-ml.firebaseapp.com/project/scatter-plot-d3.js/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/project/scatter-plot-d3.js/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

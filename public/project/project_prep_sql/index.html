@@ -1,0 +1,1453 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.26" />
+  <meta name="author" content="Pedro Abel Diaz">
+  <meta name="description" content="Self-taugh Full Stack Web Developer &amp; Data Scientist">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  
+
+  <link rel="alternate" href="https://coderhook-ml.firebaseapp.com/index.xml" type="application/rss+xml" title="coderHook">
+  <link rel="feed" href="https://coderhook-ml.firebaseapp.com/index.xml" type="application/rss+xml" title="coderHook">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://coderhook-ml.firebaseapp.com/project/project_prep_sql/">
+
+  
+
+  <title>Preparing the data to use it in a mySQL database. | coderHook</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">coderHook</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article article-project" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  <img src="/img/headers/python-mysql.png" class="article-banner" itemprop="image">
+  <span class="article-header-caption">Making them work together.</span>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="pub-title">
+      <h1 itemprop="name">Preparing the data to use it in a mySQL database.</h1>
+      <span class="pub-authors" itemprop="author">&nbsp;</span>
+      <span class="pull-right">
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fproject_prep_sql%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Preparing%20the%20data%20to%20use%20it%20in%20a%20mySQL%20database.&amp;url=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fproject_prep_sql%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fproject_prep_sql%2f&amp;title=Preparing%20the%20data%20to%20use%20it%20in%20a%20mySQL%20database."
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fproject_prep_sql%2f&amp;title=Preparing%20the%20data%20to%20use%20it%20in%20a%20mySQL%20database."
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Preparing%20the%20data%20to%20use%20it%20in%20a%20mySQL%20database.&amp;body=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fproject_prep_sql%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </span>
+    </div>
+
+    
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<h1 id="preparing-data-to-use-it-in-a-mysql-database">Preparing Data to use it in a mySQL database</h1>
+
+<h4 id="in-this-project-we-are-going-to-preapare-and-serve-the-data-into-a-mysql-database">In this project we are going to preapare and serve the data into a mySQL database.</h4>
+
+<pre><code class="language-python">import pandas as pd
+
+df = pd.read_csv(&quot;academy_awards.csv&quot;, encoding=&quot;ISO-8859-1&quot;)
+df
+</code></pre>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Category</th>
+      <th>Nominee</th>
+      <th>Additional Info</th>
+      <th>Won?</th>
+      <th>Unnamed: 5</th>
+      <th>Unnamed: 6</th>
+      <th>Unnamed: 7</th>
+      <th>Unnamed: 8</th>
+      <th>Unnamed: 9</th>
+      <th>Unnamed: 10</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2010 (83rd)</td>
+      <td>Actor -- Leading Role</td>
+      <td>Javier Bardem</td>
+      <td>Biutiful {'Uxbal'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2010 (83rd)</td>
+      <td>Actor -- Leading Role</td>
+      <td>Jeff Bridges</td>
+      <td>True Grit {'Rooster Cogburn'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2010 (83rd)</td>
+      <td>Actor -- Leading Role</td>
+      <td>Jesse Eisenberg</td>
+      <td>The Social Network {'Mark Zuckerberg'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2010 (83rd)</td>
+      <td>Actor -- Leading Role</td>
+      <td>Colin Firth</td>
+      <td>The King's Speech {'King George VI'}</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2010 (83rd)</td>
+      <td>Actor -- Leading Role</td>
+      <td>James Franco</td>
+      <td>127 Hours {'Aron Ralston'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2010 (83rd)</td>
+      <td>Actor -- Supporting Role</td>
+      <td>Christian Bale</td>
+      <td>The Fighter {'Dicky Eklund'}</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>2010 (83rd)</td>
+      <td>Actor -- Supporting Role</td>
+      <td>John Hawkes</td>
+      <td>Winter's Bone {'Teardrop'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>2010 (83rd)</td>
+      <td>Actor -- Supporting Role</td>
+      <td>Jeremy Renner</td>
+      <td>The Town {'James Coughlin'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>2010 (83rd)</td>
+      <td>Actor -- Supporting Role</td>
+      <td>Mark Ruffalo</td>
+      <td>The Kids Are All Right {'Paul'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>2010 (83rd)</td>
+      <td>Actor -- Supporting Role</td>
+      <td>Geoffrey Rush</td>
+      <td>The King's Speech {'Lionel Logue'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>2010 (83rd)</td>
+      <td>Actress -- Leading Role</td>
+      <td>Annette Bening</td>
+      <td>The Kids Are All Right {'Nic'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>2010 (83rd)</td>
+      <td>Actress -- Leading Role</td>
+      <td>Nicole Kidman</td>
+      <td>Rabbit Hole {'Becca'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>2010 (83rd)</td>
+      <td>Actress -- Leading Role</td>
+      <td>Jennifer Lawrence</td>
+      <td>Winter's Bone {'Ree'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>2010 (83rd)</td>
+      <td>Actress -- Leading Role</td>
+      <td>Natalie Portman</td>
+      <td>Black Swan {'Nina Sayers/The Swan Queen'}</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>2010 (83rd)</td>
+      <td>Actress -- Leading Role</td>
+      <td>Michelle Williams</td>
+      <td>Blue Valentine {'Cindy'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>2010 (83rd)</td>
+      <td>Actress -- Supporting Role</td>
+      <td>Amy Adams</td>
+      <td>The Fighter {'Charlene Fleming'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>2010 (83rd)</td>
+      <td>Actress -- Supporting Role</td>
+      <td>Helena Bonham Carter</td>
+      <td>The King's Speech {'Queen Elizabeth'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>2010 (83rd)</td>
+      <td>Actress -- Supporting Role</td>
+      <td>Melissa Leo</td>
+      <td>The Fighter {'Alice Ward'}</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>2010 (83rd)</td>
+      <td>Actress -- Supporting Role</td>
+      <td>Hailee Steinfeld</td>
+      <td>True Grit {'Mattie Ross'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>2010 (83rd)</td>
+      <td>Actress -- Supporting Role</td>
+      <td>Jacki Weaver</td>
+      <td>Animal Kingdom {'Janine 'Smurf' Cody'}</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>20</th>
+      <td>2010 (83rd)</td>
+      <td>Animated Feature Film</td>
+      <td>How to Train Your Dragon</td>
+      <td>Chris Sanders and Dean DeBlois</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>21</th>
+      <td>2010 (83rd)</td>
+      <td>Animated Feature Film</td>
+      <td>The Illusionist</td>
+      <td>Sylvain Chomet</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>22</th>
+      <td>2010 (83rd)</td>
+      <td>Animated Feature Film</td>
+      <td>Toy Story 3</td>
+      <td>Lee Unkrich</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>23</th>
+      <td>2010 (83rd)</td>
+      <td>Art Direction</td>
+      <td>Alice in Wonderland</td>
+      <td>Production Design: Robert Stromberg; Set Decor...</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>24</th>
+      <td>2010 (83rd)</td>
+      <td>Art Direction</td>
+      <td>Harry Potter and the Deathly Hallows Part 1</td>
+      <td>Production Design: Stuart Craig; Set Decoratio...</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>25</th>
+      <td>2010 (83rd)</td>
+      <td>Art Direction</td>
+      <td>Inception</td>
+      <td>Production Design: Guy Hendrix Dyas; Set Decor...</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>26</th>
+      <td>2010 (83rd)</td>
+      <td>Art Direction</td>
+      <td>The King's Speech</td>
+      <td>Production Design: Eve Stewart; Set Decoration...</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>27</th>
+      <td>2010 (83rd)</td>
+      <td>Art Direction</td>
+      <td>True Grit</td>
+      <td>Production Design: Jess Gonchor; Set Decoratio...</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>28</th>
+      <td>2010 (83rd)</td>
+      <td>Cinematography</td>
+      <td>Black Swan</td>
+      <td>Matthew Libatique</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>2010 (83rd)</td>
+      <td>Cinematography</td>
+      <td>Inception</td>
+      <td>Wally Pfister</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>10107</th>
+      <td>1927/28 (1st)</td>
+      <td>Art Direction</td>
+      <td>Harry Oliver</td>
+      <td>7th Heaven</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10108</th>
+      <td>1927/28 (1st)</td>
+      <td>Cinematography</td>
+      <td>George Barnes</td>
+      <td>The Devil Dancer; The Magic Flame; and Sadie T...</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10109</th>
+      <td>1927/28 (1st)</td>
+      <td>Cinematography</td>
+      <td>Charles Rosher</td>
+      <td>Sunrise</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10110</th>
+      <td>1927/28 (1st)</td>
+      <td>Cinematography</td>
+      <td>Karl Struss</td>
+      <td>Sunrise</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10111</th>
+      <td>1927/28 (1st)</td>
+      <td>Directing</td>
+      <td>Lewis Milestone</td>
+      <td>Two Arabian Knights</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10112</th>
+      <td>1927/28 (1st)</td>
+      <td>Directing</td>
+      <td>Ted Wilde</td>
+      <td>Speedy</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10113</th>
+      <td>1927/28 (1st)</td>
+      <td>Directing</td>
+      <td>Frank Borzage</td>
+      <td>7th Heaven</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10114</th>
+      <td>1927/28 (1st)</td>
+      <td>Directing</td>
+      <td>Herbert Brenon</td>
+      <td>Sorrell and Son</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10115</th>
+      <td>1927/28 (1st)</td>
+      <td>Directing</td>
+      <td>King Vidor</td>
+      <td>The Crowd</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10116</th>
+      <td>1927/28 (1st)</td>
+      <td>Directing</td>
+      <td>To Charles Chaplin, for acting, writing, direc...</td>
+      <td>NaN</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10117</th>
+      <td>1927/28 (1st)</td>
+      <td>Best Picture</td>
+      <td>The Caddo Company</td>
+      <td>The Racket</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10118</th>
+      <td>1927/28 (1st)</td>
+      <td>Best Picture</td>
+      <td>Fox</td>
+      <td>7th Heaven</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10119</th>
+      <td>1927/28 (1st)</td>
+      <td>Best Picture</td>
+      <td>Paramount Famous Lasky</td>
+      <td>Wings</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10120</th>
+      <td>1927/28 (1st)</td>
+      <td>Writing</td>
+      <td>Alfred Cohn</td>
+      <td>The Jazz Singer</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10121</th>
+      <td>1927/28 (1st)</td>
+      <td>Writing</td>
+      <td>Anthony Coldeway</td>
+      <td>Glorious Betsy</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10122</th>
+      <td>1927/28 (1st)</td>
+      <td>Writing</td>
+      <td>Benjamin Glazer</td>
+      <td>7th Heaven</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10123</th>
+      <td>1927/28 (1st)</td>
+      <td>Writing</td>
+      <td>Lajos Biro</td>
+      <td>The Last Command</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10124</th>
+      <td>1927/28 (1st)</td>
+      <td>Writing</td>
+      <td>Ben Hecht</td>
+      <td>Underworld</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10125</th>
+      <td>1927/28 (1st)</td>
+      <td>Writing</td>
+      <td>Gerald Duffy</td>
+      <td>The Private Life of Helen of Troy</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10126</th>
+      <td>1927/28 (1st)</td>
+      <td>Writing</td>
+      <td>Joseph Farnham[NOTE: This award was not associ...</td>
+      <td>NaN</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10127</th>
+      <td>1927/28 (1st)</td>
+      <td>Writing</td>
+      <td>George Marion, Jr.[NOTE: This nomination was n...</td>
+      <td>NaN</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10128</th>
+      <td>1927/28 (1st)</td>
+      <td>Writing</td>
+      <td>To Charles Chaplin, for acting, writing, direc...</td>
+      <td>NaN</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10129</th>
+      <td>1927/28 (1st)</td>
+      <td>Honorary Award</td>
+      <td>To Warner Bros., for producing The Jazz Singer...</td>
+      <td>NaN</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10130</th>
+      <td>1927/28 (1st)</td>
+      <td>Honorary Award</td>
+      <td>To Charles Chaplin, for acting, writing, direc...</td>
+      <td>NaN</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10131</th>
+      <td>1927/28 (1st)</td>
+      <td>Engineering Effects (archaic category)</td>
+      <td>Ralph Hammeras [NOTE: This nomination was not ...</td>
+      <td>NaN</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10132</th>
+      <td>1927/28 (1st)</td>
+      <td>Engineering Effects (archaic category)</td>
+      <td>Roy Pomeroy</td>
+      <td>Wings</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10133</th>
+      <td>1927/28 (1st)</td>
+      <td>Engineering Effects (archaic category)</td>
+      <td>Nugent Slaughter [NOTE: Though no specific tit...</td>
+      <td>NaN</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10134</th>
+      <td>1927/28 (1st)</td>
+      <td>Unique and Artistic Picture (archaic category)</td>
+      <td>Fox</td>
+      <td>Sunrise</td>
+      <td>YES</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10135</th>
+      <td>1927/28 (1st)</td>
+      <td>Unique and Artistic Picture (archaic category)</td>
+      <td>Metro-Goldwyn-Mayer</td>
+      <td>The Crowd</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>10136</th>
+      <td>1927/28 (1st)</td>
+      <td>Unique and Artistic Picture (archaic category)</td>
+      <td>Paramount Famous Lasky</td>
+      <td>Chang</td>
+      <td>NO</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>10137 rows × 11 columns</p>
+</div>
+
+<pre><code class="language-python">df.ix[5].value_counts()
+</code></pre>
+
+<pre><code>C:\Anaconda3\lib\site-packages\ipykernel_launcher.py:1: DeprecationWarning:
+.ix is deprecated. Please use
+.loc for label based indexing or
+.iloc for positional indexing
+
+See the documentation here:
+http://pandas.pydata.org/pandas-docs/stable/indexing.html#deprecate_ix
+  &quot;&quot;&quot;Entry point for launching an IPython kernel.
+
+
+
+
+
+Christian Bale                  1
+YES                             1
+Actor -- Supporting Role        1
+The Fighter {'Dicky Eklund'}    1
+2010 (83rd)                     1
+Name: 5, dtype: int64
+</code></pre>
+
+<h1 id="filtering-the-data">Filtering The Data</h1>
+
+<pre><code class="language-python">df['Year'] = df['Year'].str[0:4]
+df['Year'] = df['Year'].astype('int64')
+
+later_than_2000 = df[df['Year'] &gt; 2000]
+award_categories = ['Actor -- Leading Role', 'Actor -- Supporting Role', 'Actress -- Leading Role', 'Actress -- Supporting Role']
+
+nominations = later_than_2000[later_than_2000[&quot;Category&quot;].isin(award_categories)]
+
+print(nominations.head())
+</code></pre>
+
+<pre><code>   Year               Category          Nominee  \
+0  2010  Actor -- Leading Role    Javier Bardem   
+1  2010  Actor -- Leading Role     Jeff Bridges   
+2  2010  Actor -- Leading Role  Jesse Eisenberg   
+3  2010  Actor -- Leading Role      Colin Firth   
+4  2010  Actor -- Leading Role     James Franco   
+
+                          Additional Info Won? Unnamed: 5 Unnamed: 6  \
+0                      Biutiful {'Uxbal'}   NO        NaN        NaN   
+1           True Grit {'Rooster Cogburn'}   NO        NaN        NaN   
+2  The Social Network {'Mark Zuckerberg'}   NO        NaN        NaN   
+3    The King's Speech {'King George VI'}  YES        NaN        NaN   
+4              127 Hours {'Aron Ralston'}   NO        NaN        NaN   
+
+  Unnamed: 7 Unnamed: 8 Unnamed: 9 Unnamed: 10  
+0        NaN        NaN        NaN         NaN  
+1        NaN        NaN        NaN         NaN  
+2        NaN        NaN        NaN         NaN  
+3        NaN        NaN        NaN         NaN  
+4        NaN        NaN        NaN         NaN  
+</code></pre>
+
+<h1 id="cleaning-up-the-won-and-unnamed-columns">Cleaning Up The Won? And Unnamed Columns</h1>
+
+<pre><code class="language-python">pd.options.mode.chained_assignment = None # default='warn'
+replace_dict = {'NO': 0, 'YES': 1}
+nominations['Won?'] = nominations['Won?'].map(replace_dict)
+nominations['Won'] = nominations['Won?']
+drop_cols = ['Won?', 'Unnamed: 5', 'Unnamed: 6', 'Unnamed: 7', 'Unnamed: 8', 'Unnamed: 9', 'Unnamed: 10']
+
+final_nominations = nominations.drop(drop_cols, axis=1)
+final_nominations.head()
+</code></pre>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Category</th>
+      <th>Nominee</th>
+      <th>Additional Info</th>
+      <th>Won</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2010</td>
+      <td>Actor -- Leading Role</td>
+      <td>Javier Bardem</td>
+      <td>Biutiful {'Uxbal'}</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2010</td>
+      <td>Actor -- Leading Role</td>
+      <td>Jeff Bridges</td>
+      <td>True Grit {'Rooster Cogburn'}</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2010</td>
+      <td>Actor -- Leading Role</td>
+      <td>Jesse Eisenberg</td>
+      <td>The Social Network {'Mark Zuckerberg'}</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2010</td>
+      <td>Actor -- Leading Role</td>
+      <td>Colin Firth</td>
+      <td>The King's Speech {'King George VI'}</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2010</td>
+      <td>Actor -- Leading Role</td>
+      <td>James Franco</td>
+      <td>127 Hours {'Aron Ralston'}</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h1 id="cleaning-up-the-additional-info-column">Cleaning Up The Additional Info Column</h1>
+
+<ul>
+<li>The values in this column contain the movie name and the character the nominee played. Instead of keeping these values in 1 column, split them up into 2 different columns for easier querying.</li>
+</ul>
+
+<pre><code class="language-python">additional_info_one = final_nominations['Additional Info'].str.rstrip(&quot;'}&quot;)
+additional_info_two = additional_info_one.str.split(&quot; {'&quot;)
+movie_names = additional_info_two.str[0]
+characters = additional_info_two.str[1]
+
+final_nominations['Movie'] = movie_names
+final_nominations['Character'] = characters
+
+final_nominations = final_nominations.drop(&quot;Additional Info&quot;, axis=1)
+final_nominations.head()
+
+</code></pre>
+
+<div>
+<style>
+    .dataframe thead tr:only-child th {
+        text-align: right;
+    }
+
+    .dataframe thead th {
+        text-align: left;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Year</th>
+      <th>Category</th>
+      <th>Nominee</th>
+      <th>Won</th>
+      <th>Movie</th>
+      <th>Character</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>2010</td>
+      <td>Actor -- Leading Role</td>
+      <td>Javier Bardem</td>
+      <td>0</td>
+      <td>Biutiful</td>
+      <td>Uxbal</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2010</td>
+      <td>Actor -- Leading Role</td>
+      <td>Jeff Bridges</td>
+      <td>0</td>
+      <td>True Grit</td>
+      <td>Rooster Cogburn</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>2010</td>
+      <td>Actor -- Leading Role</td>
+      <td>Jesse Eisenberg</td>
+      <td>0</td>
+      <td>The Social Network</td>
+      <td>Mark Zuckerberg</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>2010</td>
+      <td>Actor -- Leading Role</td>
+      <td>Colin Firth</td>
+      <td>1</td>
+      <td>The King's Speech</td>
+      <td>King George VI</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>2010</td>
+      <td>Actor -- Leading Role</td>
+      <td>James Franco</td>
+      <td>0</td>
+      <td>127 Hours</td>
+      <td>Aron Ralston</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h1 id="exporting-to-sqlite">Exporting To SQLite</h1>
+
+<pre><code class="language-python">import sqlite3
+
+conn = sqlite3.connect(&quot;nominations.db&quot;)
+final_nominations.to_sql(&quot;nominations&quot;, conn, index=False)
+
+</code></pre>
+
+<pre><code>---------------------------------------------------------------------------
+
+ValueError                                Traceback (most recent call last)
+
+&lt;ipython-input-8-102f757f32a4&gt; in &lt;module&gt;()
+      2
+      3 conn = sqlite3.connect(&quot;nominations.db&quot;)
+----&gt; 4 final_nominations.to_sql(&quot;nominations&quot;, conn, index=False)
+
+
+C:\Anaconda3\lib\site-packages\pandas\core\generic.py in to_sql(self, name, con, flavor, schema, if_exists, index, index_label, chunksize, dtype)
+   1343         sql.to_sql(self, name, con, flavor=flavor, schema=schema,
+   1344                    if_exists=if_exists, index=index, index_label=index_label,
+-&gt; 1345                    chunksize=chunksize, dtype=dtype)
+   1346
+   1347     def to_pickle(self, path, compression='infer'):
+
+
+C:\Anaconda3\lib\site-packages\pandas\io\sql.py in to_sql(frame, name, con, flavor, schema, if_exists, index, index_label, chunksize, dtype)
+    469     pandas_sql.to_sql(frame, name, if_exists=if_exists, index=index,
+    470                       index_label=index_label, schema=schema,
+--&gt; 471                       chunksize=chunksize, dtype=dtype)
+    472
+    473
+
+
+C:\Anaconda3\lib\site-packages\pandas\io\sql.py in to_sql(self, frame, name, if_exists, index, index_label, schema, chunksize, dtype)
+   1503                             if_exists=if_exists, index_label=index_label,
+   1504                             dtype=dtype)
+-&gt; 1505         table.create()
+   1506         table.insert(chunksize)
+   1507
+
+
+C:\Anaconda3\lib\site-packages\pandas\io\sql.py in create(self)
+    586         if self.exists():
+    587             if self.if_exists == 'fail':
+--&gt; 588                 raise ValueError(&quot;Table '%s' already exists.&quot; % self.name)
+    589             elif self.if_exists == 'replace':
+    590                 self.pd_sql.drop_table(self.name, self.schema)
+
+
+ValueError: Table 'nominations' already exists.
+</code></pre>
+
+<h1 id="verifying-in-sql">Verifying In SQL</h1>
+
+<pre><code class="language-python">query_one = &quot;PRAGMA table_info(nominations)&quot;
+query_two = &quot;select * from nominations limit 10&quot;
+print(conn.execute(query_one).fetchall())
+print(conn.execute(query_two).fetchall())
+conn.close()
+</code></pre>
+
+    </div>
+
+  </div>
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://coderhook-ml.firebaseapp.com/project/star_wars-survey/"><span
+      aria-hidden="true">&larr;</span> StarWars Survey. Which is the most popular version?</a></li>
+    
+
+    
+    <li class="next"><a href="https://coderhook-ml.firebaseapp.com/project/board_games_reviews_predictions/">Predicting Board Games Reviews, Custers, Correlations and choosing an Error.  <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 coderHook &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

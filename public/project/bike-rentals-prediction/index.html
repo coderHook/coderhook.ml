@@ -1,0 +1,757 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="theme" content="hugo-academic">
+  <meta name="generator" content="Hugo 0.26" />
+  <meta name="author" content="Pedro Abel Diaz">
+  <meta name="description" content="Self-taugh Full Stack Web Developer &amp; Data Scientist">
+
+  
+  
+  
+    
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha512-6MXa8B6uaO18Hid6blRMetEIoPqHf7Ux1tnyIQdpt9qI5OACx7C+O3IVTr98vwGnlcg0LOLa02i9Y1HpVhlfiw==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/academicons/1.8.1/css/academicons.min.css" integrity="sha512-NThgw3XKQ1absAahW6to7Ey42uycrVvfNfyjqcFNgCmOCQ5AR4AO0SiXrN+8ZtYeappp56lk1WtvjVmEa+VR6A==" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous">
+  
+  
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Lato:400,700%7CMerriweather%7CRoboto+Mono">
+  <link rel="stylesheet" href="/css/hugo-academic.css">
+  
+
+  
+
+  <link rel="alternate" href="https://coderhook-ml.firebaseapp.com/index.xml" type="application/rss+xml" title="coderHook">
+  <link rel="feed" href="https://coderhook-ml.firebaseapp.com/index.xml" type="application/rss+xml" title="coderHook">
+
+  <link rel="icon" type="image/png" href="/img/icon.png">
+  <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
+
+  <link rel="canonical" href="https://coderhook-ml.firebaseapp.com/project/bike-rentals-prediction/">
+
+  
+
+  <title>Bike Rentals Prediction | coderHook</title>
+
+</head>
+<body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
+
+<nav class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+  <div class="container">
+
+    
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target=".navbar-collapse" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">coderHook</a>
+    </div>
+
+    
+    <div class="collapse navbar-collapse">
+
+      
+      <ul class="nav navbar-nav navbar-right">
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#about">
+            
+            <span>Home</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#projects">
+            
+            <span>Projects</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+
+        <li class="nav-item">
+          <a href="/#contact">
+            
+            <span>Contact</span>
+          </a>
+        </li>
+
+        
+        
+
+        
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+
+<article class="article article-project" itemscope itemtype="http://schema.org/Article">
+
+  
+<div class="article-header">
+  <img src="/img/headers/rental-bikes.jpg" class="article-banner" itemprop="image">
+  <span class="article-header-caption">Predicting the apropiate number of bikes that we will need in order to provide the service 😄</span>
+</div>
+
+
+
+  <div class="article-container">
+
+    <div class="pub-title">
+      <h1 itemprop="name">Bike Rentals Prediction</h1>
+      <span class="pub-authors" itemprop="author">&nbsp;</span>
+      <span class="pull-right">
+        
+<div class="share-box" aria-hidden="true">
+  <ul class="share">
+    <li>
+      <a class="facebook"
+         href="https://www.facebook.com/sharer.php?u=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fbike-rentals-prediction%2f"
+         target="_blank">
+        <i class="fa fa-facebook"></i>
+      </a>
+    </li>
+    <li>
+      <a class="twitter"
+         href="https://twitter.com/intent/tweet?text=Bike%20Rentals%20Prediction&amp;url=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fbike-rentals-prediction%2f"
+         target="_blank">
+        <i class="fa fa-twitter"></i>
+      </a>
+    </li>
+    <li>
+      <a class="linkedin"
+         href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fbike-rentals-prediction%2f&amp;title=Bike%20Rentals%20Prediction"
+         target="_blank">
+        <i class="fa fa-linkedin"></i>
+      </a>
+    </li>
+    <li>
+      <a class="weibo"
+         href="http://service.weibo.com/share/share.php?url=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fbike-rentals-prediction%2f&amp;title=Bike%20Rentals%20Prediction"
+         target="_blank">
+        <i class="fa fa-weibo"></i>
+      </a>
+    </li>
+    <li>
+      <a class="email"
+         href="mailto:?subject=Bike%20Rentals%20Prediction&amp;body=https%3a%2f%2fcoderhook-ml.firebaseapp.com%2fproject%2fbike-rentals-prediction%2f">
+        <i class="fa fa-envelope"></i>
+      </a>
+    </li>
+  </ul>
+</div>
+
+
+      </span>
+    </div>
+
+    
+
+    <div class="article-style" itemprop="articleBody">
+      
+
+<pre><code class="language-python">import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+%matplotlib inline
+
+bike_rentals = pd.read_csv(&quot;bike_rental_hour.csv&quot;)
+
+print(bike_rentals.head())
+</code></pre>
+
+<pre><code>   instant      dteday  season  yr  mnth  hr  holiday  weekday  workingday  \
+0        1  2011-01-01       1   0     1   0        0        6           0   
+1        2  2011-01-01       1   0     1   1        0        6           0   
+2        3  2011-01-01       1   0     1   2        0        6           0   
+3        4  2011-01-01       1   0     1   3        0        6           0   
+4        5  2011-01-01       1   0     1   4        0        6           0   
+
+   weathersit  temp   atemp   hum  windspeed  casual  registered  cnt  
+0           1  0.24  0.2879  0.81        0.0       3          13   16  
+1           1  0.22  0.2727  0.80        0.0       8          32   40  
+2           1  0.22  0.2727  0.80        0.0       5          27   32  
+3           1  0.24  0.2879  0.75        0.0       3          10   13  
+4           1  0.24  0.2879  0.75        0.0       0           1    1  
+</code></pre>
+
+<pre><code class="language-python">plt.hist(bike_rentals['cnt'])
+plt.show()
+</code></pre>
+
+<p><img src="/img/ds/bike/output_1_0.png" alt="jpg" /></p>
+
+<pre><code class="language-python">bike_rentals.corr()
+</code></pre>
+
+<div>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>instant</th>
+      <th>season</th>
+      <th>yr</th>
+      <th>mnth</th>
+      <th>hr</th>
+      <th>holiday</th>
+      <th>weekday</th>
+      <th>workingday</th>
+      <th>weathersit</th>
+      <th>temp</th>
+      <th>atemp</th>
+      <th>hum</th>
+      <th>windspeed</th>
+      <th>casual</th>
+      <th>registered</th>
+      <th>cnt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>instant</th>
+      <td>1.000000</td>
+      <td>0.404046</td>
+      <td>0.866014</td>
+      <td>0.489164</td>
+      <td>-0.004775</td>
+      <td>0.014723</td>
+      <td>0.001357</td>
+      <td>-0.003416</td>
+      <td>-0.014198</td>
+      <td>0.136178</td>
+      <td>0.137615</td>
+      <td>0.009577</td>
+      <td>-0.074505</td>
+      <td>0.158295</td>
+      <td>0.282046</td>
+      <td>0.278379</td>
+    </tr>
+    <tr>
+      <th>season</th>
+      <td>0.404046</td>
+      <td>1.000000</td>
+      <td>-0.010742</td>
+      <td>0.830386</td>
+      <td>-0.006117</td>
+      <td>-0.009585</td>
+      <td>-0.002335</td>
+      <td>0.013743</td>
+      <td>-0.014524</td>
+      <td>0.312025</td>
+      <td>0.319380</td>
+      <td>0.150625</td>
+      <td>-0.149773</td>
+      <td>0.120206</td>
+      <td>0.174226</td>
+      <td>0.178056</td>
+    </tr>
+    <tr>
+      <th>yr</th>
+      <td>0.866014</td>
+      <td>-0.010742</td>
+      <td>1.000000</td>
+      <td>-0.010473</td>
+      <td>-0.003867</td>
+      <td>0.006692</td>
+      <td>-0.004485</td>
+      <td>-0.002196</td>
+      <td>-0.019157</td>
+      <td>0.040913</td>
+      <td>0.039222</td>
+      <td>-0.083546</td>
+      <td>-0.008740</td>
+      <td>0.142779</td>
+      <td>0.253684</td>
+      <td>0.250495</td>
+    </tr>
+    <tr>
+      <th>mnth</th>
+      <td>0.489164</td>
+      <td>0.830386</td>
+      <td>-0.010473</td>
+      <td>1.000000</td>
+      <td>-0.005772</td>
+      <td>0.018430</td>
+      <td>0.010400</td>
+      <td>-0.003477</td>
+      <td>0.005400</td>
+      <td>0.201691</td>
+      <td>0.208096</td>
+      <td>0.164411</td>
+      <td>-0.135386</td>
+      <td>0.068457</td>
+      <td>0.122273</td>
+      <td>0.120638</td>
+    </tr>
+    <tr>
+      <th>hr</th>
+      <td>-0.004775</td>
+      <td>-0.006117</td>
+      <td>-0.003867</td>
+      <td>-0.005772</td>
+      <td>1.000000</td>
+      <td>0.000479</td>
+      <td>-0.003498</td>
+      <td>0.002285</td>
+      <td>-0.020203</td>
+      <td>0.137603</td>
+      <td>0.133750</td>
+      <td>-0.276498</td>
+      <td>0.137252</td>
+      <td>0.301202</td>
+      <td>0.374141</td>
+      <td>0.394071</td>
+    </tr>
+    <tr>
+      <th>holiday</th>
+      <td>0.014723</td>
+      <td>-0.009585</td>
+      <td>0.006692</td>
+      <td>0.018430</td>
+      <td>0.000479</td>
+      <td>1.000000</td>
+      <td>-0.102088</td>
+      <td>-0.252471</td>
+      <td>-0.017036</td>
+      <td>-0.027340</td>
+      <td>-0.030973</td>
+      <td>-0.010588</td>
+      <td>0.003988</td>
+      <td>0.031564</td>
+      <td>-0.047345</td>
+      <td>-0.030927</td>
+    </tr>
+    <tr>
+      <th>weekday</th>
+      <td>0.001357</td>
+      <td>-0.002335</td>
+      <td>-0.004485</td>
+      <td>0.010400</td>
+      <td>-0.003498</td>
+      <td>-0.102088</td>
+      <td>1.000000</td>
+      <td>0.035955</td>
+      <td>0.003311</td>
+      <td>-0.001795</td>
+      <td>-0.008821</td>
+      <td>-0.037158</td>
+      <td>0.011502</td>
+      <td>0.032721</td>
+      <td>0.021578</td>
+      <td>0.026900</td>
+    </tr>
+    <tr>
+      <th>workingday</th>
+      <td>-0.003416</td>
+      <td>0.013743</td>
+      <td>-0.002196</td>
+      <td>-0.003477</td>
+      <td>0.002285</td>
+      <td>-0.252471</td>
+      <td>0.035955</td>
+      <td>1.000000</td>
+      <td>0.044672</td>
+      <td>0.055390</td>
+      <td>0.054667</td>
+      <td>0.015688</td>
+      <td>-0.011830</td>
+      <td>-0.300942</td>
+      <td>0.134326</td>
+      <td>0.030284</td>
+    </tr>
+    <tr>
+      <th>weathersit</th>
+      <td>-0.014198</td>
+      <td>-0.014524</td>
+      <td>-0.019157</td>
+      <td>0.005400</td>
+      <td>-0.020203</td>
+      <td>-0.017036</td>
+      <td>0.003311</td>
+      <td>0.044672</td>
+      <td>1.000000</td>
+      <td>-0.102640</td>
+      <td>-0.105563</td>
+      <td>0.418130</td>
+      <td>0.026226</td>
+      <td>-0.152628</td>
+      <td>-0.120966</td>
+      <td>-0.142426</td>
+    </tr>
+    <tr>
+      <th>temp</th>
+      <td>0.136178</td>
+      <td>0.312025</td>
+      <td>0.040913</td>
+      <td>0.201691</td>
+      <td>0.137603</td>
+      <td>-0.027340</td>
+      <td>-0.001795</td>
+      <td>0.055390</td>
+      <td>-0.102640</td>
+      <td>1.000000</td>
+      <td>0.987672</td>
+      <td>-0.069881</td>
+      <td>-0.023125</td>
+      <td>0.459616</td>
+      <td>0.335361</td>
+      <td>0.404772</td>
+    </tr>
+    <tr>
+      <th>atemp</th>
+      <td>0.137615</td>
+      <td>0.319380</td>
+      <td>0.039222</td>
+      <td>0.208096</td>
+      <td>0.133750</td>
+      <td>-0.030973</td>
+      <td>-0.008821</td>
+      <td>0.054667</td>
+      <td>-0.105563</td>
+      <td>0.987672</td>
+      <td>1.000000</td>
+      <td>-0.051918</td>
+      <td>-0.062336</td>
+      <td>0.454080</td>
+      <td>0.332559</td>
+      <td>0.400929</td>
+    </tr>
+    <tr>
+      <th>hum</th>
+      <td>0.009577</td>
+      <td>0.150625</td>
+      <td>-0.083546</td>
+      <td>0.164411</td>
+      <td>-0.276498</td>
+      <td>-0.010588</td>
+      <td>-0.037158</td>
+      <td>0.015688</td>
+      <td>0.418130</td>
+      <td>-0.069881</td>
+      <td>-0.051918</td>
+      <td>1.000000</td>
+      <td>-0.290105</td>
+      <td>-0.347028</td>
+      <td>-0.273933</td>
+      <td>-0.322911</td>
+    </tr>
+    <tr>
+      <th>windspeed</th>
+      <td>-0.074505</td>
+      <td>-0.149773</td>
+      <td>-0.008740</td>
+      <td>-0.135386</td>
+      <td>0.137252</td>
+      <td>0.003988</td>
+      <td>0.011502</td>
+      <td>-0.011830</td>
+      <td>0.026226</td>
+      <td>-0.023125</td>
+      <td>-0.062336</td>
+      <td>-0.290105</td>
+      <td>1.000000</td>
+      <td>0.090287</td>
+      <td>0.082321</td>
+      <td>0.093234</td>
+    </tr>
+    <tr>
+      <th>casual</th>
+      <td>0.158295</td>
+      <td>0.120206</td>
+      <td>0.142779</td>
+      <td>0.068457</td>
+      <td>0.301202</td>
+      <td>0.031564</td>
+      <td>0.032721</td>
+      <td>-0.300942</td>
+      <td>-0.152628</td>
+      <td>0.459616</td>
+      <td>0.454080</td>
+      <td>-0.347028</td>
+      <td>0.090287</td>
+      <td>1.000000</td>
+      <td>0.506618</td>
+      <td>0.694564</td>
+    </tr>
+    <tr>
+      <th>registered</th>
+      <td>0.282046</td>
+      <td>0.174226</td>
+      <td>0.253684</td>
+      <td>0.122273</td>
+      <td>0.374141</td>
+      <td>-0.047345</td>
+      <td>0.021578</td>
+      <td>0.134326</td>
+      <td>-0.120966</td>
+      <td>0.335361</td>
+      <td>0.332559</td>
+      <td>-0.273933</td>
+      <td>0.082321</td>
+      <td>0.506618</td>
+      <td>1.000000</td>
+      <td>0.972151</td>
+    </tr>
+    <tr>
+      <th>cnt</th>
+      <td>0.278379</td>
+      <td>0.178056</td>
+      <td>0.250495</td>
+      <td>0.120638</td>
+      <td>0.394071</td>
+      <td>-0.030927</td>
+      <td>0.026900</td>
+      <td>0.030284</td>
+      <td>-0.142426</td>
+      <td>0.404772</td>
+      <td>0.400929</td>
+      <td>-0.322911</td>
+      <td>0.093234</td>
+      <td>0.694564</td>
+      <td>0.972151</td>
+      <td>1.000000</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<h1 id="calculating-features">Calculating Features</h1>
+
+<ul>
+<li>We are going to introduce some order in hour data by separating the hours in terms of morning, afternoon, evening and night</li>
+</ul>
+
+<pre><code class="language-python">def assign_label(hour):
+    if (hour &gt; 6 ) &amp; (hour &lt;= 12):
+        return 1
+    if (hour &gt; 12 ) &amp; (hour &lt;= 18):
+        return 2
+    if (hour &gt; 18 ) &amp; (hour &lt;= 24):
+        return 3
+    if (hour &gt;= 0 ) &amp; (hour &lt;= 6):
+        return 4
+
+bike_rentals['time_label'] = bike_rentals['hr'].apply(lambda x: assign_label(x))
+</code></pre>
+
+<pre><code class="language-python">print(bike_rentals.head())
+</code></pre>
+
+<pre><code>   instant      dteday  season  yr  mnth  hr  holiday  weekday  workingday  \
+0        1  2011-01-01       1   0     1   0        0        6           0   
+1        2  2011-01-01       1   0     1   1        0        6           0   
+2        3  2011-01-01       1   0     1   2        0        6           0   
+3        4  2011-01-01       1   0     1   3        0        6           0   
+4        5  2011-01-01       1   0     1   4        0        6           0   
+
+   weathersit  temp   atemp   hum  windspeed  casual  registered  cnt  \
+0           1  0.24  0.2879  0.81        0.0       3          13   16   
+1           1  0.22  0.2727  0.80        0.0       8          32   40   
+2           1  0.22  0.2727  0.80        0.0       5          27   32   
+3           1  0.24  0.2879  0.75        0.0       3          10   13   
+4           1  0.24  0.2879  0.75        0.0       0           1    1   
+
+   time_label  
+0           4  
+1           4  
+2           4  
+3           4  
+4           4  
+</code></pre>
+
+<h1 id="splitting-the-data-into-train-and-test-sets">Splitting The Data Into Train And Test Sets</h1>
+
+<ul>
+<li>In this case we are going to use the Mean Squared error, which make sense for our continous data.</li>
+</ul>
+
+<pre><code class="language-python">how_many_rows = np.int(len(bike_rentals) * .8)
+
+train = bike_rentals.sample(frac=.8)
+test = bike_rentals.loc[~bike_rentals.index.isin(train.index)]
+</code></pre>
+
+<pre><code class="language-python">predictors = list(bike_rentals.columns)
+
+predictors.remove('cnt')
+predictors.remove('casual')
+predictors.remove('dteday')
+predictors.remove('registered')
+
+print(predictors)
+</code></pre>
+
+<pre><code>['instant', 'season', 'yr', 'mnth', 'hr', 'holiday', 'weekday', 'workingday', 'weathersit', 'temp', 'atemp', 'hum', 'windspeed', 'time_label']
+</code></pre>
+
+<pre><code class="language-python">from sklearn.linear_model import LinearRegression
+
+model = LinearRegression()
+model.fit(train[predictors], train['cnt'])
+
+predict = model.predict(test[predictors])
+
+mse = np.mean((test['cnt'] - predict) ** 2)
+
+print('error: ', mse)
+
+</code></pre>
+
+<pre><code>error:  16211.415323715768
+</code></pre>
+
+<ul>
+<li>Thought about the error:
+
+<ul>
+<li>It is very high, so it should be due to the reason that some data is too high and then there comes this high mean squared.</li>
+</ul></li>
+</ul>
+
+<h1 id="applying-decision-trees">Applying Decision Trees</h1>
+
+<ul>
+<li>In order to choose which model fits better our data we are going to checck how decision trees work with this dataframe and after that we will see which one though us a bigger error so we can compare.</li>
+</ul>
+
+<pre><code class="language-python">from sklearn.tree import DecisionTreeRegressor
+
+model_tree = DecisionTreeRegressor()
+model_tree.fit(train[predictors], train['cnt'])
+predictions_tree = model_tree.predict(test[predictors])
+
+mse_tree = np.mean((test['cnt'] - predictions_tree) ** 2)
+
+print('mse_tree: ', mse_tree)
+</code></pre>
+
+<pre><code>mse_tree:  3138.406501726122
+</code></pre>
+
+<ul>
+<li>As we can see, using decision tree we are going to get more accuracy in our predictions than with linearregression, because as we proved, the mean squared error is smaller in the dec tree than in Linear regression.</li>
+</ul>
+
+<h1 id="applying-random-forest">Applying Random Forest</h1>
+
+<pre><code class="language-python">from sklearn.ensemble import RandomForestRegressor
+
+model_forest = RandomForestRegressor()
+model_forest.fit(train[predictors], train['cnt'])
+predict_forest = model_forest.predict(test[predictors])
+
+mse_forest = np.mean((test['cnt'] - predict_forest) ** 2)
+
+print('mse_forest: ', mse_forest)
+
+</code></pre>
+
+<pre><code>mse_forest:  1906.2452301495964
+</code></pre>
+
+<pre><code class="language-python">Github link:
+`https://github.com/coderHook/Project---Predicting-Bike-Rentals-using-Forest-Decision-Model`
+</code></pre>
+
+    </div>
+
+  </div>
+</article>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://coderhook-ml.firebaseapp.com/project/proj_sql_relations/"><span
+      aria-hidden="true">&larr;</span> Creating Relations in SQL database and Python.</a></li>
+    
+
+    
+    <li class="next"><a href="https://coderhook-ml.firebaseapp.com/project/first-time-with-matplotlib/"> Using Matplotlib, first steps.  <span
+      aria-hidden="true">&rarr;</span></a></li>
+    
+  </ul>
+</nav>
+
+</div>
+
+<footer class="site-footer">
+  <div class="container">
+    <p class="powered-by">
+
+      &copy; 2017 coderHook &middot; 
+
+      Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
+      theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
+
+      <span class="pull-right" aria-hidden="true">
+        <a href="#" id="back_to_top">
+          <span class="button_icon">
+            <i class="fa fa-chevron-up fa-2x"></i>
+          </span>
+        </a>
+      </span>
+
+    </p>
+  </div>
+</footer>
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js" integrity="sha512-jGsMH83oKe9asCpkOVkBnUrDDTp8wl+adkB2D+//JtlxO4SrLoJdhbOysIFQJloQFD+C4Fl1rMsQZF76JjV0eQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.2/imagesloaded.pkgd.min.js" integrity="sha512-iHzEu7GbSc705hE2skyH6/AlTpOfBmkx7nUqTLGzPYR+C1tRaItbRlJ7hT/D3YQ9SV0fqLKzp4XY9wKulTBGTw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js" integrity="sha512-Z5heTz36xTemt1TbtbfXtTq5lMfYnOkXM2/eWcTTiLU01+Sw4ku1i7vScDc8fWhrP2abz9GQzgKH5NGBLoYlAw==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/plugins/ScrollToPlugin.min.js" integrity="sha512-CDeU7pRtkPX6XJtF/gcFWlEwyaX7mcAp5sO3VIu/ylsdR74wEw4wmBpD5yYTrmMAiAboi9thyBUr1vXRPA7t0Q==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha512-iztkobsvnjKfAtTNdHkGVjAYTrrtlC7mGp/54c40wowO7LhURYl3gVzzcEqGl/qKXQltJ2HwMrdLcNUdo+N/RQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.isotope/3.0.4/isotope.pkgd.min.js" integrity="sha512-VDBOIlDbuC4VWxGJNmuFRQ0Li0SKkDpmGyuhAG5LTDLd/dJ/S0WMVxriR2Y+CyPL5gzjpN4f/6iqWVBJlht0tQ==" crossorigin="anonymous"></script>
+    
+    <script src="/js/hugo-academic.js"></script>
+    
+
+    
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
+
+    
+    
+
+  </body>
+</html>
+

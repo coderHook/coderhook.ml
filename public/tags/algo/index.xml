@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Algo on coderHook</title>
+    <link>https://coderhook-ml.firebaseapp.com/tags/algo/</link>
+    <description>Recent content in Algo on coderHook</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>&amp;copy; 2017 coderHook</copyright>
+    <lastBuildDate>Wed, 27 Apr 2016 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/tags/algo/" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>FreeCodeCamp Algorithms</title>
+      <link>https://coderhook-ml.firebaseapp.com/project/freecodecamp/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/project/freecodecamp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Simon says GAME</title>
+      <link>https://coderhook-ml.firebaseapp.com/project/simon_game/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/project/simon_game/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>TicTacToe GAME</title>
+      <link>https://coderhook-ml.firebaseapp.com/project/tictactoe/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/project/tictactoe/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Web made to Proyectados Ignifugos Inc</title>
+      <link>https://coderhook-ml.firebaseapp.com/project/proyectadosignifugos/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/project/proyectadosignifugos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WikiViewer using the wikipedia API</title>
+      <link>https://coderhook-ml.firebaseapp.com/project/wikiviewer/</link>
+      <pubDate>Wed, 27 Apr 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://coderhook-ml.firebaseapp.com/project/wikiviewer/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
